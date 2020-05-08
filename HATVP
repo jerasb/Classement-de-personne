@@ -1,0 +1,24 @@
+ListeEleves = [["Aminata","Adem","Jeras"],["Aya","Yannis","Walid"],["Younes","Nolan","Ruben"],["Kevindra","Sidy","Rémi"],["Nour","Othman","Mehdi"]]
+ListeT = []
+
+def Tri():
+    l=[]
+    for ss_liste in ListeEleves:
+        for items in ss_liste:
+            ListeT.append(items)
+    return Tri
+
+
+
+def Algo_Principal():
+    Dico={}
+    Tri()
+    for itemsListeT in ListeT:
+        pts = 0
+        for ss_liste in ListeEleves:
+            for itemss_liste in ss_liste:
+                if itemss_liste == itemsListeT:
+                    pts= pts + 100- ss_liste.index(itemss_liste * 5)
+        Dico[itemsListeT]= str(int(pts)) + "pts"
+    print(Dico)
+    return Algo_Principal
